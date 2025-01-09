@@ -3,8 +3,10 @@ import AppNavList from "./AppNavList";
 
 function AppLayout() {
   return (
-    <AppNavList />
-    <Outlet />
+    <>
+      <AppNavList />
+      <Outlet />
+    </>
   );
 }
 
