@@ -2,7 +2,7 @@ import styles from "./Card.module.css";
 
 const urlIndex = "http://localhost:3000";
 
-export function Card({
+export default function Card({
   titolo = "",
   contenuto = "",
   categoria = "",
