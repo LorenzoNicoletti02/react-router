@@ -49,6 +49,7 @@ function ListaPost() {
             titolo={currObject.titolo}
             contenuto={currObject.contenuto}
             categoria={currObject.categoria}
+            id={currObject.id}
             immagine={currObject.immagine}
             callbackCestina={(event) => {
               funzioneCestina(currObject.id); // Passa l'ID

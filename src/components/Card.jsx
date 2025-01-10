@@ -5,6 +5,7 @@ const urlIndex = "http://localhost:3000";
 export default function Card({
   titolo = "",
   contenuto = "",
+  id = "",
   categoria = "",
   immagine = "",
   callbackCestina,
@@ -28,6 +29,7 @@ export default function Card({
           arraySpanTags.map((tag) => <span className={styles.tag}>{tag}</span>)}
       </div>
       <div>
+        <a href={`/ListaPost/${id}`}>Dettagli</a>
         <button onClick={callbackCestina} className={styles.button}>
           Cestina
         </button>
