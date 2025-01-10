@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Card from "./Card";
+import Card from "../Card";
 import axios from "axios";
 
 function ListaPost() {
@@ -28,7 +28,6 @@ function ListaPost() {
         setArrayState(response.data);
         console.log(response.data);
       });
-      return response.data; // Restituisci i dati
     } catch (error) {
       console.error("Errore nella fetch:", error);
       return null; // Gestisci l'errore

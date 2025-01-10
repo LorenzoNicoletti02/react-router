@@ -6,6 +6,7 @@ function AppNavList() {
       <NavLink to={"/"}>Home</NavLink>
       <NavLink to={"/ChiSiamo"}>Chi Siamo</NavLink>
       <NavLink to={"/ListaPost"}>Lista Post</NavLink>
+      <NavLink to={"/ListaPost/:id"}>Dettagli post</NavLink>
     </nav>
   );
 }
