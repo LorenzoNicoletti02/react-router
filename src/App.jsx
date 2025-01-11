@@ -2,7 +2,7 @@ import AppLayout from "./components/AppLayout";
 import HomeComponent from "./components/pages/HomeComponent";
 import ChiSiamo from "./components/pages/ChiSiamo";
 import ListaPost from "./components/pages/ListaPost";
-import PostDetail from "./components/pages/PostDetail";
+import PostDetail from "./components/pages/postDetail";
 import NotFound from "./components/pages/NotFound";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
