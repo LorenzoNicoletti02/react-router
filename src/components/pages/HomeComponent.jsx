@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
+import { useNavigate } from "react-router-dom";
 
 function HomeComponent() {
   // Facciamo oggetto state di PARTENZA
@@ -13,6 +14,9 @@ function HomeComponent() {
     tags: [],
   };
 
+  const navigate = useNavigate();
+
+  const urlIndex = "http://localhost:3000/posts";
   const [oggettoInpState, oggettoSetInpState] = useState(oggettoStatePartenza);
 
   // Faccio arrayState che conterrà tutti i nostri oggetti a onSubmit del form
@@ -22,6 +26,7 @@ function HomeComponent() {
     try {
       const response = await axios.post(urlIndex, oggettoInpState);
       console.log("Vengo dal post", response.data);
+      navigate(`/ListaPost/${response.data.id}`);
       return response.data;
     } catch (error) {
       console.error("Errore nella fetch:", error);
@@ -205,8 +210,6 @@ function HomeComponent() {
         {/* Card contenente dati da oggettoInputState */}
         <button type="submit">Invia</button>
       </form>
-
-      <hr />
     </>
   );
 }

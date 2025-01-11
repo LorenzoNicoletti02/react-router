@@ -10,7 +10,6 @@ function PostDetail() {
   useEffect(() => {
     axios.get(`${urlIndex}/posts/${id}`).then((Response) => {
       setPost(Response.data);
-      console.log(Response.data);
     });
   }, []);
 
